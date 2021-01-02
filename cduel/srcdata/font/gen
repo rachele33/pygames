@@ -1,0 +1,15 @@
+#!/bin/sh
+
+for FONT in font_g font_y font_r
+do
+    SRC="$FONT"".svg"
+    OFN="$FONT""_all.png"
+    OF2="../../data/font/""$FONT.png"
+
+    echo "$OFN"
+    rsvg-convert "$SRC" -o "$OFN"
+    echo "$OF2-*"
+    convert -crop 16x24 "$OFN" "$OF2"
+    rm -f "$OFN"
+done
+

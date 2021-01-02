@@ -1,0 +1,22 @@
+#!/bin/sh
+OUT="../../data/decks/"
+
+for IFN in *-front.svg
+do
+    OFN="fronts.png"
+    rsvg-convert "$IFN" -o "$OFN"
+
+    BN=$(basename "$IFN" "-front.svg")
+    echo "$BN""-*"
+    OFN2="$OUT""$BN"".png"
+    convert -crop 100x150 "$OFN" "$OFN2"
+done
+
+for IFN in *-back.svg
+do
+    BN=$(basename "$IFN" "-back.svg")
+    OFN="$OUT""$BN""-52.png"
+    rsvg-convert "$IFN" -o "$OFN"
+done
+
+rm -f fronts.png

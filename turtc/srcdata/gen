@@ -1,0 +1,10 @@
+#!/bin/sh
+for dir in */; do
+    if [ -e "$dir""/gen" ]; then
+        echo "$dir""/gen"
+        cd "$dir"
+            ./gen
+        cd ..
+    fi
+done
+

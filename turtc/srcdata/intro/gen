@@ -1,0 +1,7 @@
+#!/bin/sh
+
+for IFN in intro*.png; do
+    OFN="../../data/""$IFN"
+    echo "$OFN"
+    cp -a "$IFN" "$OFN"
+done

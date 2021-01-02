@@ -1,0 +1,32 @@
+#!/bin/sh
+for n in 0 1 2 3 4 5 6 7 8 9; do
+    echo dom$n
+    rsvg-convert dom$n.svg -o ../data/d0$n.png
+
+    convert ../data/d0$n.png -rotate 90 ../data/d1$n.png
+    convert ../data/d0$n.png -rotate 180 ../data/d2$n.png
+    convert ../data/d0$n.png -rotate 270 ../data/d3$n.png
+
+    convert ../data/d0$n.png -scale 30x30 ../data/ld0$n.png
+    convert ../data/d0$n.png -scale 30x30 -rotate 90 ../data/ld1$n.png
+    convert ../data/d0$n.png -scale 30x30 -rotate 180 ../data/ld2$n.png
+    convert ../data/d0$n.png -scale 30x30 -rotate 270 ../data/ld3$n.png
+done
+
+for f in board invalid point power0 power1 sel; do
+    echo $f
+    rsvg-convert $f.svg -o ../data/$f.png
+done
+
+for FONT in font; do
+    SRC="$FONT"".svg"
+    OFN="$FONT""_all.png"
+    OF2="../data/""$FONT.png"
+
+    echo "$OFN"
+    rsvg-convert "$SRC" -o "$OFN"
+    echo "$OF2-*"
+    convert -crop 16x24 "$OFN" "$OF2"
+    rm -f "$OFN"
+done
+

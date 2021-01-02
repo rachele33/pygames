@@ -1,0 +1,9 @@
+#!/bin/sh
+
+for IFN in *.svg; do
+    BN=$(basename "$IFN" ".svg")
+
+    OFN="../../data/""$BN"".png"
+    echo "$OFN"
+    rsvg-convert "$IFN" -o "$OFN"
+done

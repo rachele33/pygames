@@ -1,0 +1,14 @@
+#!/bin/sh
+
+OFN="../../data/maps.json"
+echo $OFN
+./map_gen.py "map_" > "$OFN"
+
+for IFN in map_*.svg; do
+    BN=$(basename "$IFN" ".svg")
+
+    OFN="../../data/""$BN"".png"
+    echo "$OFN"
+    rsvg-convert "$IFN" -o "$OFN"
+done
+

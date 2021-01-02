@@ -1,0 +1,11 @@
+#!/bin/sh
+
+SRC=font.svg
+OFN=font_all.png
+OF2=../../data/font.png
+
+echo "$OFN"
+rsvg-convert "$SRC" -o "$OFN"
+echo "$OF2-*"
+convert -crop 25x30 "$OFN" "$OF2"
+

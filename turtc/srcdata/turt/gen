@@ -1,0 +1,4 @@
+#!/bin/sh
+
+../gen_rot turt_0
+../gen_rot turt_1

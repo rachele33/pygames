@@ -1,0 +1,4 @@
+#!/bin/sh
+
+../gen_rot cat_0
+../gen_rot cat_1

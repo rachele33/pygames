@@ -1,0 +1,4 @@
+#!/bin/sh
+
+../gen_rot dad_0
+../gen_rot dad_1

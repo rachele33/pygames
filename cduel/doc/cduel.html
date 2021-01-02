@@ -1,0 +1,79 @@
+<!DOCTYPE html5>
+<html>
+<head><title>gizmo offline</title></head>
+<body bgcolor="#30001a" text="#f0f0f0">
+    <center>
+<h1>
+<font color="#f02020">
+CARD DUEL
+</font>
+</h1>
+<h2>
+<br>A card game for two players,
+<br>using standard playing cards
+<br>and a coin.
+</h2>
+<br>© 2014 Richard A. Benson
+<br>Created by Richard Benson, Devina Reetz
+<br><br><img src='../srcdata/decks/default-back.svg'>
+    </center>
+
+<h2>
+Suit names
+</h2>
+
+<ul>
+    <li>spades = swords</li>
+    <li>hearts = cups</li>
+    <li>clubs = wands</li>
+    <li>diamonds = shields</li>
+</ul>
+
+<h2>
+Card values 
+</h2>
+<ul>
+    <li>2-10 = as named</li>
+    <li>jack = 11</li>
+    <li>queen = 12</li>
+    <li>king = 13</li>
+    <li>ace = 14</li>
+</ul>
+
+<h2>
+Instructions
+</h2>
+1. players sit facing each other, with room for play area in-between<br>
+2. players begin with a score of 30 each (in units of HP, i.e. "Hit Points")<br>
+3. youngest player takes coin and announces, "As the youngest player, I go first." then places coin directly in front of self<br>
+4. eldest player takes deck and announces, "As the eldest player, I deal."<br>
+5. dealer shuffles deck if necissary<br>
+6. dealer deals 5 cards to other player, 5 cards to self, then places deck face down to their left<br>
+7. player 1 takes a turn, as so:<br>
+- player chooses any card from hand and places face up on left play area<br>
+- if the card is wands, player may stack more wand cards (face up) and must finish by stacking any card face down<br>
+8. player 2 takes turn, as in step 7, but without requiring any card on a wand card to be face down<br> 
+9. player 1 flips to reveal any down facing card<br>
+10. player 1's card is scored, as so:<br>
+- if cups, card value is immediately added to player's score<br>
+- if wands, and top card is either shields or swords, all wand values are added to top card value and top card is evaluated, as below<br>
+- if swords, card value (including any wands) is noted. if other player is showing a shield, shield value (including any wands) is subtracted. resulting value, if greater than zero, is subtracted from other player's score. If other player's score reaches zero, player wins and game play ends<br>
+11. player 2's card is scored, as in step 10<br>
+12. dealer places played cards in discard pile to his right<br>
+13. coin is taken by player 2 and placed directly in front of themself to indicate that they are now player 1<br>
+14. if necissary, dealer reshuffles discard pile as new deck<br>
+15. dealer deals cards to player 1 as needed, such that they have 5 cards<br>
+16. dealer deals cards to self as needed, such that they have 5 cards<br>
+17. continue rounds (repeat from step 7) until a player wins<br>
+
+<h2>
+Special rules
+</h2>
+<h3>
+Blaze of glory
+</h3>
+<p>
+If desired during turn, player places full hand down, visible, in front of play area. other player must do the same. all wands are ignored. other player's cups are totalled and applied to themself. player's swords are totalled and scored against other player's total shields. if other player is not defeated, other player wins and game play ends
+</p>
+
+</body></head></html>

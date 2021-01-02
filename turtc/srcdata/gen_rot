@@ -1,0 +1,28 @@
+#!/bin/sh
+
+SRC="$1.svg"
+WIDTH=$(grep "   width=" "$SRC" | cut -d\" -f2)
+HEIGHT=$(grep "   height=" "$SRC" | cut -d\" -f2)
+
+IFN="../../data/""$1""_0.png"
+echo "$IFN"
+rsvg-convert "$SRC" -o "$IFN"
+
+ROT=1
+while [ $ROT -lt 36 ]
+do
+    OFN="../../data/""$1_"$ROT".png"
+    echo "$OFN"
+    DEG=$(expr $ROT \* -10)
+    convert -background transparent -rotate $DEG -crop "$WIDTH"x"$HEIGHT" "$IFN" "$OFN"
+
+    if [ -e "../../data/""$1_"$ROT"-0.png" ]
+    then
+        echo "..."
+        mv "../../data/""$1_"$ROT"-0.png" "../../data/""$1_"$ROT".png"
+        rm ../../data/"$1_"$ROT-*.png
+    fi
+
+    ROT=$(expr $ROT + 1)
+done
+

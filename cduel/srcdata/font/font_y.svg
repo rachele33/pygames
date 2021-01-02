@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="164"
+   height="24"
+   id="svg4894"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="font_y.svg">
+  <defs
+     id="defs4896" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2.8"
+     inkscape:cx="34.982703"
+     inkscape:cy="37.290931"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1024"
+     inkscape:window-height="717"
+     inkscape:window-x="0"
+     inkscape:window-y="29"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata4899">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-57.461315,-1028.18)">
+    <text
+       xml:space="preserve"
+       style="font-size:6.84454154999999975px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#c3ff72;fill-opacity:1;stroke:#000000;stroke-width:0.76050466000000005;stroke-opacity:1;display:inline;filter:url(#filter3936);enable-background:new;font-family:Sans"
+       x="65.474098"
+       y="936.11877"
+       id="text4866"
+       sodipodi:linespacing="125%"
+       transform="scale(0.89034092,1.1231653)"><tspan
+         sodipodi:role="line"
+         id="tspan4868"
+         x="65.474098"
+         y="936.11877"
+         style="font-size:30.42018509000000037px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#c3ff72;stroke:#000000;stroke-width:0.76050466000000005;stroke-opacity:1;font-family:Liberation Mono;-inkscape-font-specification:Liberation Mono Bold;fill-opacity:1">0123456789</tspan></text>
+  </g>
+</svg>

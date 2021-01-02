@@ -1,0 +1,9 @@
+#!/bin/sh
+
+for INF in *.svg
+do
+    OUTF="../../data/"$(basename "$INF" .svg)".png"
+    echo "$OUTF"
+    rsvg-convert "$INF" -o "$OUTF"
+done
+

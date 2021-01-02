@@ -1,0 +1,4 @@
+#!/bin/sh
+convert -crop 32x32 font.png font.bgra
+png2bgra gameover.png gameover.bgra
+
