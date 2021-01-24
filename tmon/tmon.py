@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-''' © 2014 Richard A. Benson <richardbenson91477@gmail.com> '''
+''' © 2014 Richard A. Benson <richardbenson91477@protonmail.com> '''
 import sys, os, math, random, ctypes
 import sdl2, sdl2.sdlmixer, sdl2.sdlimage
 

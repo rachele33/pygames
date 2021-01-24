@@ -1,4 +1,4 @@
-''' © 2014 Richard A. Benson <richardbenson91477@gmail.com> '''
+''' © 2014 Richard A. Benson <richardbenson91477@protonmail.com> '''
 import math, os, random
 import sdl2.sdlimage
 
