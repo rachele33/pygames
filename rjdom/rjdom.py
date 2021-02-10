@@ -111,11 +111,11 @@ def init ():
 
     s.d_img, s.ld_img = [[],[]]
     for i in range(40):
-        s.d_img += [sdl2.sdlimage.IMG_Load (
-            bytes (os.path.join ('data', 'd' + '%.2d' % i + '.png'), 'utf-8'))]
+        s.d_img.append(sdl2.sdlimage.IMG_Load (
+            bytes (os.path.join ('data', 'd' + '%.2d' % i + '.png'), 'utf-8')))
 
-        s.ld_img += [sdl2.sdlimage.IMG_Load (
-            bytes (os.path.join ('data', 'ld' + '%.2d' % i + '.png'), 'utf-8'))]
+        s.ld_img.append(sdl2.sdlimage.IMG_Load (
+            bytes (os.path.join ('data', 'ld' + '%.2d' % i + '.png'), 'utf-8')))
 
     s.misc_imgs = [sdl2.sdlimage.IMG_Load (
         bytes (os.path.join ('data', str(n) + '.png'), 'utf-8'))
