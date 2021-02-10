@@ -292,11 +292,11 @@ def on_move (mx, my):
 def calc_piece_dstrects ():
     s.piece_dstrects = []
     for i in range(s.piece_n):
-        s.piece_dstrects += [sdl2.SDL_Rect (
+        s.piece_dstrects.append(sdl2.SDL_Rect (
             s.puzzle_x + (s.piece_pos[i][0] * s.piece_w),
             s.puzzle_y + (s.piece_pos[i][1] * s.piece_h),
             s.piece_w,
-            s.piece_h )]
+            s.piece_h))
 
 def set_puzzle_dim (n):
     s.puzzle_dim = n
@@ -307,26 +307,26 @@ def set_puzzle_dim (n):
     s.piece_srcrects = []
     for y in range(s.puzzle_dim):
         for x in range(s.puzzle_dim):
-            s.piece_pos += [[x, y]]
-            s.piece_srcrects += [sdl2.SDL_Rect (
+            s.piece_pos.append([x, y])
+            s.piece_srcrects.append(sdl2.SDL_Rect (
                 x * s.piece_w,
                 y * s.piece_h,
                 s.piece_w,
-                s.piece_h)]
+                s.piece_h))
 
     grid_hw = 2
     s.grid_dstrects = []
     for i in range(1, s.puzzle_dim):
-        s.grid_dstrects += [sdl2.SDL_Rect (
+        s.grid_dstrects.append(sdl2.SDL_Rect (
             s.puzzle_x + (i * s.piece_w) - grid_hw,
             s.puzzle_y,
             grid_hw * 2,
-            s.puzzle_h )]
-        s.grid_dstrects += [sdl2.SDL_Rect (
+            s.puzzle_h ))
+        s.grid_dstrects.append(sdl2.SDL_Rect (
             s.puzzle_x,
             s.puzzle_y + (i * s.piece_h) - grid_hw,
             s.puzzle_w,
-            grid_hw * 2)]
+            grid_hw * 2))
 
     calc_piece_dstrects ()
     paint_puzzle ()
