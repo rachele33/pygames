@@ -97,7 +97,7 @@ def main ():
                     done = True
                     break
             elif event.type == sdl2.SDL_MOUSEBUTTONDOWN:
-                if event.button.button is 1:
+                if event.button.button == 1:
                     on_click (event.button.x, event.button.y)
             elif event.type == sdl2.SDL_MOUSEMOTION:
                 on_move (event.motion.x, event.motion.y)

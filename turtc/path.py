@@ -31,6 +31,6 @@ class Path:
                 c4 * self.curves[curve_c][3][1]))
 
     def curve_add (self, p1, p2, p3, p4):
-        self.curves += [[p1, p2, p3, p4]]
+        self.curves.append([p1, p2, p3, p4])
         self.curves_n += 1
 

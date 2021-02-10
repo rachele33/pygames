@@ -29,16 +29,16 @@ class Map:
         self.end_siz = end_siz
 
     def add_rect (self, pos, siz):
-        self.rects += [(pos, siz)]
+        self.rects.append((pos, siz))
 
     def add_arc (self, pos, siz):
-        self.arcs += [(pos, siz)]
+        self.arcs.append((pos, siz))
 
     def add_item (self, _item):
-        self.items += [_item]
+        self.items.append(_item)
 
     def add_being (self, being):
-        self.beings += [being]
+        self.beings.append(being)
 
     def paint_img (self, windowsurface):
         sdl2.SDL_BlitSurface (self.img, None, windowsurface, None)
@@ -106,7 +106,7 @@ def load_maps ():
                 being['path_rate'],
                 being['path_data']))
 
-        s.maps += [_map]
+        s.maps.append(_map)
 
 def reset_maps ():
     for _map in s.maps:
