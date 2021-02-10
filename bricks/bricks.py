@@ -88,7 +88,7 @@ def init (which):
         if not f_in:
             return -1
         for i in range (s.img_font_n):
-            s.img_font_p += [f_in.read (s.img_font_w * s.img_font_h * 4)]
+            s.img_font_p.append(f_in.read (s.img_font_w * s.img_font_h * 4))
         f_in.close ()
 
         s.draw = ctypes.cdll.LoadLibrary ('./draw.so')
@@ -159,7 +159,7 @@ def game_level_init ():
                 w = int(fw * (c + 1)) - x
             else:
                 w = s.win_w - x
-            s.bricks += [[True, x, y, w, s.brick_h, s.brick_row_colors[r]]]
+            s.bricks.append([True, x, y, w, s.brick_h, s.brick_row_colors[r]])
         y += s.brick_h
     s.brick_n = s.brick_rows * s.brick_cols
 
