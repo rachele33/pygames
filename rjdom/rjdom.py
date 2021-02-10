@@ -358,7 +358,7 @@ def init_layout ():
         x = s.tile_w + cx * s.tile_w
         for cy in range(8):
             y = s.tile_w + cy * s.tile_w
-            s.layout [s.LAY_TILE][cx] += [sdl2.SDL_Rect (x, y)]
+            s.layout[s.LAY_TILE][cx].append(sdl2.SDL_Rect(x, y))
 
     s.layout [s.LAY_BOARD] = sdl2.SDL_Rect (0, 0)
     s.layout [s.LAY_POWER] = sdl2.SDL_Rect (0, 0)
@@ -408,7 +408,7 @@ def begin ():
             d = domino ()
             d.vals[0] = x;
             d.vals[1] = y;
-            s.doms += [d]
+            s.doms.append(d)
 
     random.shuffle (s.doms)
 
@@ -538,36 +538,36 @@ def calc_score ():
     if d.tile1_i[1] < 7 and d.rot != 0:
         v = s.grid [d.tile1_i[0]][d.tile1_i[1] + 1]
         if v:
-            s.score_list += [[d.tile1_i[0], d.tile1_i[1] + 1, v]]
+            s.score_list.append([d.tile1_i[0], d.tile1_i[1] + 1, v])
     if d.tile1_i[0] > 0 and d.rot != 1:
         v = s.grid [d.tile1_i[0] - 1][d.tile1_i[1]]
         if v:
-            s.score_list += [[d.tile1_i[0] - 1, d.tile1_i[1], v]]
+            s.score_list.append([d.tile1_i[0] - 1, d.tile1_i[1], v])
     if d.tile1_i[1] > 0 and d.rot != 2:
         v = s.grid [d.tile1_i[0]][d.tile1_i[1] - 1]
         if v:
-            s.score_list += [[d.tile1_i[0], d.tile1_i[1] - 1, v]]
+            s.score_list.append([d.tile1_i[0], d.tile1_i[1] - 1, v])
     if d.tile1_i[0] < 7 and d.rot != 3:
         v = s.grid [d.tile1_i[0] + 1][d.tile1_i[1]]
         if v:
-            s.score_list += [[d.tile1_i[0] + 1, d.tile1_i[1], v]]
+            s.score_list.append([d.tile1_i[0] + 1, d.tile1_i[1], v])
 
     if d.tile2_i[1] < 7 and d.rot != 2:
         v = s.grid [d.tile2_i[0]][d.tile2_i[1] + 1]
         if v:
-            s.score_list += [[d.tile2_i[0], d.tile2_i[1] + 1, v]]
+            s.score_list.append([d.tile2_i[0], d.tile2_i[1] + 1, v])
     if d.tile2_i[0] > 0 and d.rot != 3:
         v = s.grid [d.tile2_i[0] - 1][d.tile2_i[1]]
         if v:
-            s.score_list += [[d.tile2_i[0] - 1, d.tile2_i[1], v]]
+            s.score_list.append([d.tile2_i[0] - 1, d.tile2_i[1], v])
     if d.tile2_i[1] > 0 and d.rot != 0:
         v = s.grid [d.tile2_i[0]][d.tile2_i[1] - 1]
         if v:
-            s.score_list += [[d.tile2_i[0], d.tile2_i[1] - 1, v]]
+            s.score_list.append([d.tile2_i[0], d.tile2_i[1] - 1, v])
     if d.tile2_i[0] < 7 and d.rot != 1:
         v = s.grid [d.tile2_i[0] + 1][d.tile2_i[1]]
         if v:
-            s.score_list += [[d.tile2_i[0] + 1, d.tile2_i[1], v]]
+            s.score_list.append([d.tile2_i[0] + 1, d.tile2_i[1], v])
 
 def check_space ():
     for y in range(8):
@@ -587,7 +587,7 @@ def check_space ():
             y += 1
             continue
         x += 1
-        s.del_list += [y]
+        s.del_list.append(y)
         y += 1
 
 def prepare_dom_c ():
